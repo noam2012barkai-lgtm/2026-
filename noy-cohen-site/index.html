@@ -1,0 +1,1073 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>Noy Cohen Architecture & Interior Design</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Noy Cohen – Architecture & Interior Design. אדריכלות, עיצוב פנים ותכנון מטבחים. תכנון ועיצוב חללים מתוך מחשבה על האנשים שחיים ומשתמשים בהם.">
+<meta property="og:title" content="Noy Cohen – Architecture & Interior Design">
+<meta property="og:description" content="עיצוב נכון מתחיל בתכנון מדויק.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap">
+<link rel="icon" type="image/png" href="img/logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Noy Cohen – Architecture & Interior Design","description":"אדריכלות, עיצוב פנים, תכנון מטבחים, סטיילינג והדמיות.","email":"noyc.arc.design@gmail.com"}</script>
+<style>
+/* Layout concept: Apple-style scroll story in warm minimalism.
+   Grey band from the top of the page through the studio name, centered hero whose photograph widens to full bleed,
+   interactive service list with sticky preview, full-bleed project opener, editorial gallery, drag-to-compare,
+   dark contact close. Hebrew (RTL), English and Spanish (LTR) share one layout built on logical properties. */
+:root{
+  --beige:#E8D8C5;
+  --cream:#FAF9F6;
+  --brown:#A68B70;
+  --gray:#77736E;
+  --black:#252525;
+  --band:#C8C6C1;
+  --gray-text:#67635E;
+  --dim:rgba(37,37,37,.28);
+  --line:rgba(37,37,37,.16);
+  /* Poppins has no Hebrew glyphs: Latin text is Poppins, Hebrew falls back to Heebo */
+  --f:"Poppins","Heebo",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --gutter:max(20px,env(safe-area-inset-left,0px));
+  --gutter-r:max(20px,env(safe-area-inset-right,0px));
+  --space-section:clamp(88px,13vw,200px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--cream);color:var(--black);font-family:var(--f);font-size:16.5px;line-height:1.75;font-weight:300;text-align:start;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--cream);z-index:60}
+:root.top body::before{background:var(--band)}
+img,video{display:block;max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+h1,h2,h3,p,ul,figure,blockquote{margin:0}
+ul{padding:0;list-style:none}
+button{font-family:var(--f)}
+:focus-visible{outline:2px solid var(--black);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;inset-inline-start:16px;top:-60px;background:var(--black);color:var(--cream);padding:10px 16px;z-index:100;text-decoration:none}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 8px)}
+.wrap{width:100%;max-width:1280px;margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+
+.h-display{font-family:var(--f);font-weight:300;line-height:1.18;letter-spacing:-.015em;text-wrap:balance}
+.h2{font-size:clamp(2.1rem,5vw,4rem)}
+.lead{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.85;color:var(--gray-text);max-width:34em}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 34px;font:400 .95rem/1 var(--f);letter-spacing:.01em;text-decoration:none;border:1px solid var(--black);background:var(--black);color:var(--cream);cursor:pointer;border-radius:999px;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease)}
+.btn:hover{background:var(--brown);border-color:var(--brown);color:var(--black)}
+.btn:active{transform:scale(.98)}
+.btn--ghost{background:transparent;color:var(--black)}
+.btn--ghost:hover{background:var(--black);border-color:var(--black);color:var(--cream)}
+.btn--sm{min-height:42px;padding:0 24px;font-size:.88rem}
+
+/* header: shares the grey band at the top of the page, turns cream once scrolled */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--band);border-bottom:1px solid transparent;transition:transform .5s var(--ease),background .4s,border-color .3s}
+.site-header.scrolled{background:var(--cream);border-bottom-color:var(--line)}
+.site-header.hide{transform:translateY(-100%)}
+.site-header .wrap{display:flex;align-items:center;gap:24px;min-height:78px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;margin-inline-end:auto}
+.brand img{height:46px;width:auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1.3rem;font-weight:500;letter-spacing:.005em}
+.brand-tag{font-size:.62rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#3f3c38}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:.9rem;font-weight:400;padding:8px 0;background:linear-gradient(var(--brown),var(--brown)) right bottom/0 1px no-repeat;transition:background-size .4s var(--ease)}
+.nav a:hover{background-size:100% 1px}
+.lang{display:flex;align-items:center;gap:2px;direction:ltr}
+.lang button{padding:4px 8px;border:0;border-bottom:1px solid transparent;background:transparent;color:var(--gray-text);font-size:.85rem;font-weight:500;letter-spacing:.06em;cursor:pointer;transition:color .2s,border-color .2s}
+.lang button:hover{color:var(--black)}
+.lang button[aria-pressed="true"]{color:var(--black);border-bottom-color:var(--black)}
+.menu-btn{display:none;width:46px;height:46px;border:1px solid rgba(37,37,37,.3);border-radius:50%;background:transparent;cursor:pointer;color:var(--black);align-items:center;justify-content:center}
+.menu-btn span{display:block;width:20px;height:1px;background:currentColor;position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;inset-inline:0;height:1px;background:currentColor;transition:transform .3s var(--ease)}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{overflow:clip}
+.hero-band{background:var(--band);padding-block:clamp(28px,5vw,72px) clamp(40px,6vw,84px)}
+.hero-name{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.hero-name .n{font-weight:400;font-size:clamp(2.2rem,6vw,4.8rem);line-height:1;letter-spacing:.04em;text-transform:uppercase;animation:fade 1.4s var(--ease) both}
+.hero-name .t{font-size:clamp(.66rem,1.2vw,.9rem);letter-spacing:.34em;text-transform:uppercase;color:var(--black);font-weight:500;padding-inline-start:.34em;animation:fade 1.4s var(--ease) both .25s}
+.hero-top{display:flex;flex-direction:column;align-items:center;text-align:center;padding-block:clamp(56px,8vw,112px) clamp(72px,10vw,150px)}
+.hero h1{font-size:clamp(1.9rem,4.2vw,3.3rem);margin-bottom:24px;max-width:16em}
+.hero .lead{margin-inline:auto;margin-bottom:38px;text-align:center;animation:fade 1.2s var(--ease) both .9s}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;animation:fade 1.2s var(--ease) both 1s}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+.w>span{display:inline-block;transform:translateY(105%);animation:wordUp 1s var(--ease) forwards;animation-delay:calc(.35s + var(--i)*.09s)}
+@keyframes wordUp{to{transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+/* about */
+.about{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(32px,5vw,56px)}
+.about-body{display:flex;flex-direction:column;align-items:center}
+.about h2{margin-bottom:clamp(28px,4vw,48px)}
+.about-lead{font-weight:400;font-size:clamp(1.4rem,2.8vw,2.2rem);line-height:1.4;letter-spacing:-.01em;margin-bottom:clamp(24px,3vw,36px);text-wrap:balance}
+.about-text{display:flex;flex-direction:column;gap:20px;max-width:32em;margin-inline:auto;color:var(--gray-text);font-size:clamp(1rem,1.3vw,1.1rem)}
+.about-text .em{color:var(--black);font-weight:400}
+.about-photo{aspect-ratio:3/4;width:min(380px,78%);margin-inline:auto;background:var(--beige);overflow:hidden}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+
+.pre{opacity:0;transform:translateY(32px)}
+.rv{transition:opacity 1s var(--ease),transform 1.1s var(--ease)}
+.tile.pre{opacity:0;transform:none;clip-path:inset(14% 0 0 0)}
+.tile.rv{transition:opacity 1s var(--ease),clip-path 1.2s var(--ease)}
+
+/* services */
+.section{padding-block:var(--space-section)}
+.section--beige{background:var(--cream);border-top:1px solid var(--line)}
+.sec-head{margin-bottom:clamp(48px,7vw,96px)}
+.services-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px,7vw,120px);align-items:start}
+.services{display:flex;flex-direction:column}
+.service{padding-block:clamp(22px,2.6vw,34px);border-top:1px solid rgba(37,37,37,.35);display:grid;grid-template-columns:minmax(0,1fr);gap:8px;transition:border-color .4s}
+.service:last-child{border-bottom:1px solid rgba(37,37,37,.35)}
+.service h3{font-weight:400;font-size:clamp(1.45rem,2.7vw,2.2rem);line-height:1.25;letter-spacing:-.01em;color:var(--black);transition:color .5s var(--ease)}
+.service p{color:var(--gray-text);font-size:.96rem;max-width:30em}
+.svc-btn{all:unset;box-sizing:border-box;display:block;width:100%;cursor:default;font:inherit;color:inherit}
+.svc-btn:focus-visible{outline:2px solid var(--black);outline-offset:4px}
+.svc-img{display:none}
+.js .services-grid.ready .service:not(.active) h3{color:rgba(37,37,37,.38)}
+.js .services-grid.ready .service.active{border-top-color:var(--black)}
+.preview{position:sticky;top:110px;aspect-ratio:4/5;background:var(--cream);overflow:hidden}
+.preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .8s var(--ease),transform 1.4s var(--ease)}
+.preview img.on{opacity:1;transform:none}
+.preview .tag{position:absolute;inset-inline-start:16px;bottom:16px;background:var(--cream);color:var(--black);font-size:.82rem;padding:6px 14px;border-radius:999px;opacity:0;transition:opacity .4s}
+.preview .tag.on{opacity:1}
+
+/* project 1 */
+.p-head{margin-bottom:clamp(36px,5vw,64px)}
+.p-open{position:relative;overflow:hidden;height:clamp(440px,88vh,900px);background:var(--black)}
+.p-open img{position:absolute;left:0;top:-14%;width:100%;height:128%;object-fit:cover;will-change:transform}
+.p-open::after{content:"";position:absolute;inset:0;background:rgba(37,37,37,.3)}
+.p-open .wrap{position:absolute;inset-inline:0;bottom:clamp(28px,5vw,72px);z-index:2;color:var(--cream)}
+.p-open h3{font-size:clamp(2.4rem,8vw,6.4rem);font-weight:300;line-height:1.05}
+.p-story{padding-block:clamp(72px,10vw,150px)}
+.hl{font-weight:300;font-size:clamp(1.6rem,3.9vw,3.2rem);line-height:1.35;letter-spacing:-.015em;max-width:20em;text-wrap:balance}
+.hl .hw{color:var(--black);transition:color .5s}
+.js .hl .hw{color:var(--dim)}
+.js .hl .hw.on{color:var(--black)}
+.p-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,5vw,80px);margin-top:clamp(40px,6vw,90px);max-width:60em}
+.quote{background:var(--cream);border-block:1px solid var(--line);padding-block:clamp(80px,12vw,180px);text-align:center}
+.quote blockquote{font-weight:300;font-size:clamp(1.8rem,4.6vw,3.6rem);line-height:1.3;letter-spacing:-.015em;text-wrap:balance;max-width:16em;margin-inline:auto}
+/* carousels (projects, testimonials) */
+.car{margin-top:clamp(48px,7vw,96px)}
+.car-track{display:flex;align-items:flex-start;gap:clamp(10px,1.6vw,20px);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;cursor:grab;
+  padding-left:max(var(--gutter),calc((100% - 1240px)/2));padding-right:max(var(--gutter-r),calc((100% - 1240px)/2));
+  scroll-padding-left:max(var(--gutter),calc((100% - 1240px)/2));scroll-padding-right:max(var(--gutter-r),calc((100% - 1240px)/2))}
+.car-track::-webkit-scrollbar{display:none}
+.car-track.tst{align-items:stretch}
+.car-track.dragging{scroll-snap-type:none;cursor:grabbing;scroll-behavior:auto}
+.car-track.dragging>*{pointer-events:none}
+.slide{flex:0 0 auto;height:clamp(240px,62vh,640px);margin:0;padding:0;border:0;background:var(--beige);overflow:hidden;cursor:zoom-in;scroll-snap-align:start;position:relative}
+.slide img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none;transition:transform 1.1s var(--ease)}
+.slide:hover img{transform:scale(1.035)}
+.car-ctrl{display:flex;align-items:center;gap:24px;margin-top:26px}
+.car-bar{flex:1;height:1px;background:var(--line);position:relative}
+.car-bar i{position:absolute;inset:-1px 0;background:var(--black);transform:scaleX(var(--p,.15));transform-origin:0 50%;transition:transform .2s}
+[dir=rtl] .car-bar i{transform-origin:100% 50%}
+.car-btns{display:flex;gap:10px}
+.car-btn{width:48px;height:48px;border-radius:50%;border:1px solid rgba(37,37,37,.35);background:transparent;color:var(--black);font-size:1.4rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .25s,color .25s,opacity .25s}
+.car-btn:hover:not(:disabled){background:var(--black);color:var(--cream)}
+.car-btn:disabled{opacity:.3;cursor:default}
+
+/* testimonials: WhatsApp-style message cards */
+.tcard{flex:0 0 auto;width:min(340px,82vw);scroll-snap-align:start;background:#EFE7DD;border-radius:16px;padding:22px 16px 18px;display:flex;flex-direction:column;gap:12px}
+.bubble{align-self:flex-start;min-width:60%;max-width:96%;background:#fff;color:#111B21;border-radius:12px;border-start-start-radius:2px;padding:8px 11px 6px;box-shadow:0 1px .5px rgba(11,20,26,.13);font-size:.95rem;line-height:1.55;font-weight:400}
+.bubble .nm{display:block;text-align:start;font-size:.82rem;font-weight:500;color:var(--brown);margin-bottom:2px}
+.bubble .tx{white-space:pre-line;overflow-wrap:anywhere}
+.bubble img{border-radius:8px;margin-bottom:4px}
+.tck{display:block;text-align:end;margin-top:4px;line-height:0}
+.tck svg{width:17px;height:11px;stroke:#53BDEB;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.bubble .tm{display:block;text-align:end;font-size:.7rem;color:#667781;margin-top:2px}
+.bubble.ph{width:92%}
+.sk{height:9px;border-radius:5px;background:#E4E7E9;margin:9px 0}
+.tph{font-size:.8rem;color:var(--gray-text);text-align:center}
+
+/* field: before/after video + slider */
+.p2-media{margin:0;width:min(340px,100%);justify-self:center}
+.p2-media video{width:100%;height:auto;aspect-ratio:480/848;background:var(--black)}
+
+.p2{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:center;padding-top:var(--space-section)}
+.p2 h3{font-size:clamp(1.8rem,3.8vw,3rem)}
+.placeholder{aspect-ratio:16/10;border:1px dashed var(--brown);display:grid;place-items:center;text-align:center;padding:24px;color:var(--gray-text);background:rgba(232,216,197,.4)}
+
+/* field */
+.cmp-title{font-weight:300;font-size:clamp(1.4rem,2.6vw,2.1rem);margin-bottom:28px}
+.cmp{position:relative;aspect-ratio:4/3;max-width:1100px;margin-inline:auto;overflow:hidden;background:var(--cream);--x:50%;user-select:none;-webkit-user-select:none;direction:ltr}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp .top{clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--x);width:2px;margin-left:-1px;background:var(--cream);pointer-events:none}
+.cmp .knob{position:absolute;top:50%;left:var(--x);width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:var(--cream);color:var(--black);display:grid;place-items:center;pointer-events:none}
+.cmp .knob svg{width:26px;height:26px}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;-webkit-appearance:none;appearance:none;touch-action:pan-y}
+.cmp input::-webkit-slider-thumb{-webkit-appearance:none;width:80px;height:100vh}
+.cmp input::-moz-range-thumb{width:80px;height:100vh;border:0}
+.cmp:focus-within .knob{outline:2px solid var(--black);outline-offset:3px}
+.cmp .lbl{position:absolute;top:16px;background:var(--cream);color:var(--black);font-size:.85rem;padding:6px 16px;border-radius:999px;pointer-events:none}
+.cmp .lbl.l{left:16px}.cmp .lbl.r{right:16px}
+.videos{display:grid;grid-template-columns:repeat(3,minmax(0,320px));justify-content:space-between;gap:clamp(14px,2vw,28px);margin-top:clamp(64px,9vw,120px);align-items:start}
+.fig{display:flex;flex-direction:column;gap:12px;margin:0}
+.fig video{width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:var(--black)}
+.fig figcaption{font-size:.9rem;color:var(--gray-text);display:flex;align-items:center;gap:10px}
+.fig figcaption::before{content:"";width:22px;height:1px;background:var(--brown)}
+
+/* contact */
+.contact-sec{background:var(--black);color:var(--cream);padding-block:var(--space-section)}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,8vw,140px);align-items:start}
+.contact h2{margin-bottom:28px;font-size:clamp(2rem,4.4vw,3.5rem)}
+.contact .lead{color:var(--beige);font-weight:300;font-size:clamp(1.15rem,2vw,1.6rem);line-height:1.6}
+.details{margin-top:34px;display:grid;gap:10px;font-size:1rem}
+.details a{text-underline-offset:5px}
+.form{display:grid;gap:24px}
+.field{display:grid;gap:8px}
+.field label{font-size:.9rem;font-weight:400;color:var(--beige)}
+.field input,.field textarea{width:100%;font:300 1.05rem/1.5 var(--f);color:var(--cream);background:transparent;border:0;border-bottom:1px solid rgba(245,241,233,.4);border-radius:0;padding:12px 0;min-height:52px;text-align:start;transition:border-color .3s}
+.field textarea{min-height:130px;resize:vertical}
+.field input:hover,.field textarea:hover{border-bottom-color:var(--beige)}
+.field input:focus,.field textarea:focus{outline:0;border-bottom-color:var(--brown);box-shadow:0 1px 0 var(--brown)}
+.field [aria-invalid="true"]{border-bottom-color:#e6a08f}
+.err{font-size:.88rem;color:#f0b4a4;min-height:1.2em}
+.contact .btn{background:var(--cream);color:var(--black);border-color:var(--cream);justify-self:start;min-width:200px}
+.contact .btn:hover{background:var(--brown);border-color:var(--brown)}
+.success{display:grid;gap:18px;justify-items:start;padding-block:12px}
+.success .tick{width:72px;height:72px}
+.success .tick circle{fill:none;stroke:var(--brown);stroke-width:1.5;stroke-dasharray:176;stroke-dashoffset:176;animation:draw .9s var(--ease) forwards}
+.success .tick path{fill:none;stroke:var(--cream);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:40;stroke-dashoffset:40;animation:draw .6s var(--ease) forwards .6s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.success h3{font-weight:300;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.2}
+.success p{color:var(--beige);max-width:28em}
+.fine{font-size:.78rem;color:var(--beige);opacity:.75;margin-top:-4px}
+.fine a{text-underline-offset:3px}
+.status{margin-top:-6px;padding:12px 16px;border:1px solid #e6a08f;color:#f0b4a4;font-size:.92rem}
+.success a{color:var(--cream);text-underline-offset:5px;font-size:.92rem}
+
+.footer{background:var(--black);color:var(--cream);padding-block:0 calc(40px + env(safe-area-inset-bottom,0px))}
+.footer .wrap{display:flex;flex-wrap:wrap;gap:28px 48px;align-items:center;justify-content:space-between;border-top:1px solid rgba(245,241,233,.2);padding-top:44px}
+.footer .brand-tag{color:var(--beige)}
+.footer img{filter:invert(1);height:54px}
+.footer nav{display:flex;flex-wrap:wrap;gap:8px 28px;font-size:.92rem}
+.footer a{text-decoration:none;opacity:.9}
+.footer a:hover{text-decoration:underline;text-underline-offset:5px}
+.foot-mail{font-size:.92rem}
+.legal{width:100%;display:flex;flex-wrap:wrap;gap:4px 22px;font-size:.78rem;color:var(--beige);opacity:.8}
+.legal a{opacity:.9}
+.copy{width:100%;font-size:.82rem;color:var(--beige)}
+
+/* floating WhatsApp, always bottom right */
+.wa{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;z-index:70;box-shadow:0 4px 14px rgba(37,37,37,.25);transition:transform .3s var(--ease),box-shadow .3s}
+.wa:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 8px 20px rgba(37,37,37,.3)}
+.wa:focus-visible{outline-color:var(--black);outline-offset:4px}
+.wa svg{width:30px;height:30px;fill:currentColor}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(37,37,37,.96);display:none;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) var(--gutter-r) max(16px,env(safe-area-inset-bottom,0px)) var(--gutter)}
+.lb.open{display:flex;animation:fade .35s both}
+.lb img{max-width:100%;max-height:calc(100vh - 100px);width:auto;height:auto;object-fit:contain}
+.lb-btn{position:absolute;width:48px;height:48px;border:1px solid rgba(245,241,233,.5);border-radius:50%;background:transparent;color:var(--cream);font-size:1.5rem;cursor:pointer;display:grid;place-items:center;transition:background .25s,color .25s}
+.lb-btn:hover{background:var(--cream);color:var(--black)}
+.lb-close{top:calc(env(safe-area-inset-top,0px) + 14px);inset-inline-start:var(--gutter)}
+.lb-prev{inset-inline-start:var(--gutter);top:50%;transform:translateY(-50%)}
+.lb-next{inset-inline-end:var(--gutter-r);top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);color:var(--beige);font-size:.85rem}
+
+@media (max-width:1000px){
+  .menu-btn{display:inline-flex}
+  .site-header .wrap{gap:12px}
+  .nav{position:absolute;inset-inline:0;top:100%;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:8px var(--gutter-r) 20px var(--gutter);display:none}
+  .nav.open{display:flex}
+  .nav a{padding:16px 0;border-bottom:1px solid var(--line);font-size:1rem;background:none}
+  .nav .lang{padding-top:14px}
+  .header-cta{display:none}
+  .services-grid,.p2,.contact{grid-template-columns:minmax(0,1fr)}
+  .preview{display:none}
+  .js .services-grid.ready .service:not(.active) h3{color:var(--black)}
+  .svc-btn{display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;min-height:44px;-webkit-tap-highlight-color:transparent}
+  .svc-btn::after{content:"+";font-weight:300;font-size:1.7rem;line-height:1;color:var(--brown);transition:transform .4s var(--ease)}
+  .service.active .svc-btn::after{transform:rotate(45deg)}
+  .svc-img{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+  .svc-img>div{overflow:hidden;min-height:0}
+  .service.active .svc-img{grid-template-rows:1fr}
+  .svc-img img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin-top:14px;background:var(--beige)}
+  .p-cols{grid-template-columns:minmax(0,1fr)}
+  .videos{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-left:calc(var(--gutter) * -1);margin-right:calc(var(--gutter-r) * -1);padding-left:var(--gutter);padding-right:var(--gutter-r);scroll-padding-left:var(--gutter);scroll-padding-right:var(--gutter-r)}
+  .videos::-webkit-scrollbar{display:none}
+  .videos .fig{flex:0 0 min(62vw,300px);scroll-snap-align:start}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .brand img{height:40px}
+  .brand-name{font-size:1.15rem}
+  .brand-tag{font-size:.52rem;letter-spacing:.12em}
+  .hero-name .t{letter-spacing:.2em;padding-inline-start:.2em}
+  .hero-actions .btn{flex:1 1 100%}
+  .contact .btn{justify-self:stretch}
+  .wa{width:54px;height:54px}
+  .slide{height:auto;width:82vw;aspect-ratio:4/5!important}
+  .p2-media{width:min(280px,100%)}
+  .car-ctrl{gap:16px}
+}
+/* touch + mobile accessibility */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.hero .lead{color:#4d4945}
+@supports (height:100svh){
+  .p-open{height:clamp(440px,88svh,900px)}
+  @media (max-width:560px){.p-open{height:clamp(340px,56svh,480px)}.p-open img{object-position:42% 50%}}
+  .slide{height:clamp(240px,62svh,640px)}
+  .lb img{max-height:calc(100svh - 100px)}
+}
+@media (pointer:coarse),(max-width:1000px){
+  .brand{min-height:44px}
+  .footer nav a,.legal a,.foot-mail a{display:inline-flex;align-items:center;min-height:44px}
+  .footer nav{gap:0 22px}
+  .legal{gap:0 20px}
+  .legal{font-size:.86rem}
+  .fine{font-size:.86rem}
+  .copy{font-size:.88rem}
+  .footer{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .w>span{transform:none}
+  .pre{opacity:1;transform:none;clip-path:none}
+}
+</style>
+
+<div lang="he" dir="rtl" id="top">
+<a class="skip" href="#main" data-t="skip">דילוג לתוכן הראשי</a>
+
+<header class="site-header" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" data-t="brandAria" data-ta="aria-label" aria-label="Noy Cohen – Architecture & Interior Design, לראש העמוד">
+      <img src="img/logo.png" alt="" width="29" height="46">
+      <span class="brand-text">
+        <span class="brand-name">Noy Cohen</span>
+        <span class="brand-tag">Architecture &amp; Interior Design</span>
+      </span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט"><span></span></button>
+    <nav class="nav" id="nav" aria-label="ניווט ראשי" data-t="navAria" data-ta="aria-label">
+      <a href="#about" data-t="navAbout">קצת עליי</a>
+      <a href="#services" data-t="navServices">שירותים</a>
+      <a href="#projects" data-t="navProjects">פרויקטים</a>
+      <a href="#field" data-t="navField">מהשטח</a>
+      <a href="#contact" data-t="navContact">יצירת קשר</a>
+      <div class="lang" role="group" aria-label="שפה" data-t="langAria" data-ta="aria-label">
+        <button type="button" data-lang="he" aria-pressed="true" lang="he">עב</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false" lang="es">ES</button>
+      </div>
+    </nav>
+    <a class="btn btn--sm header-cta" href="#contact" data-t="navContact">יצירת קשר</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-band">
+    <div class="wrap">
+      <p class="hero-name" aria-hidden="true">
+        <span class="n">Noy Cohen</span>
+        <span class="t">Architecture &amp; Interior Design</span>
+      </p>
+    </div>
+  </div>
+  <div class="wrap hero-top">
+    <h1 class="h-display" id="hero-title" data-words data-t="h1">עיצוב נכון מתחיל בתכנון מדויק.</h1>
+    <p class="lead" data-t="lead">תכנון ועיצוב חללים מתוך מחשבה על האנשים שחיים ומשתמשים בהם, תוך יצירת חיבור בין אסתטיקה, פונקציונליות ואורח החיים.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#contact" data-t="cta1">לפגישת ייעוץ</a>
+      <a class="btn btn--ghost" href="#projects" data-t="cta2">לפרויקטים</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title" style="padding-top:0">
+  <div class="wrap about">
+    <div class="about-photo rv" data-rv><img src="img/about.jpg" data-t="aboutImg" data-ta="alt" alt="נוי כהן, אדריכלית ומעצבת פנים" loading="lazy" width="1000" height="1333"></div>
+    <div class="about-body">
+      <h2 class="h-display h2 rv" data-rv id="about-title" data-t="aboutTitle">קצת עליי</h2>
+      <p class="about-lead rv" data-rv data-t="aboutLead">נוי כהן, בת 26, אדריכלית ומעצבת פנים.</p>
+      <div class="about-text rv" data-rv>
+        <p data-t="aboutP1">אוהבת ליצור, לתכנן ולחשוב מחוץ לקופסה. מתחברת לאסתטיקה, לפרטים הקטנים ולשילוב שבין יופי לפונקציונליות.</p>
+        <p data-t="aboutP2">מאמינה שלכל בית יש אופי וסיפור משלו, ושהקסם האמיתי הוא ליצור חלל שמותאם לאנשים שחיים בו – לצרכים, לחלומות ולאורח החיים שלהם.</p>
+        <p class="em" data-t="aboutP3">אני רואה את הפוטנציאל בכל חלל, והופכת אותו לבית שתמיד חלמתם עליו.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--beige" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head rv" data-rv>
+      <h2 class="h-display h2" id="services-title" data-t="servicesTitle">השירותים שלי</h2>
+    </div>
+    <div class="services-grid" id="sgrid">
+      <ul class="services" id="services">
+        <li class="service"><h3><button type="button" class="svc-btn" data-t="n1">אדריכלות</button></h3><p data-t="d1">תכנון החלל מתוך הבנה של המבנה, של השימוש בו ושל האנשים שחיים בו.</p></li>
+        <li class="service"><h3><button type="button" class="svc-btn" data-t="n2">עיצוב פנים</button></h3><p data-t="d2">עיצוב חלל שלם, כולל פלטת חומרים שמחברת בין אסתטיקה לפונקציונליות.</p></li>
+        <li class="service"><h3><button type="button" class="svc-btn" data-t="n3">תכנון מטבחים</button></h3><p data-t="d3">תכנון מטבח מדויק ופונקציונלי, שמתאים לאורח החיים של מי שמשתמש בו.</p></li>
+        <li class="service"><h3><button type="button" class="svc-btn" data-t="n4">סטיילינג</button></h3><p data-t="d4">השלמת העיצוב בפרטים שנותנים לחלל אופי ונוכחות.</p></li>
+        <li class="service"><h3><button type="button" class="svc-btn" data-t="n5">הדמיות</button></h3><p data-t="d5">הצגה חזותית של התכנון, כדי לראות את החלל לפני שמתחילים.</p></li>
+        <li class="service"><h3><button type="button" class="svc-btn" data-t="n7">ליווי שינויי דיירים</button></h3><p data-t="d7">ליווי בשינויי הדיירים, כך שהדירה תתאים לאורח החיים של מי שגר בה.</p></li>
+      </ul>
+      <div class="preview" id="preview" aria-hidden="true">
+        <img src="img/cabinet-side.jpg" alt="" class="on" loading="lazy">
+        <img src="img/living-lamp.jpg" alt="" loading="lazy">
+        <img src="img/kitchen-island.jpg" alt="" loading="lazy">
+        <img src="img/dining-portrait-a.jpg" alt="" loading="lazy">
+        <img src="img/render-kitchen-dining.jpg" alt="" loading="lazy">
+        <img src="img/living-wide.jpg" alt="" loading="lazy">
+        <span class="tag" id="ptag" data-t="lblRender">הדמיה</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects" aria-labelledby="projects-title" style="padding-bottom:0">
+  <div class="wrap p-head">
+    <h2 class="h-display h2 rv" data-rv id="projects-title" data-t="projectsTitle">פרויקטים נבחרים</h2>
+  </div>
+
+  <article aria-labelledby="p1-title">
+    <div class="p-open">
+      <img src="img/project-open.jpg" data-t="p1alt" data-ta="alt" alt="מטבח פתוח לסלון עם אי וכיסאות בר שחורים, גופי תאורה תלויים ופס תאורה, מתוך פרויקט דירת קבלן" data-parallax="0.07" width="1600" height="900">
+      <div class="wrap"><h3 class="h-display" id="p1-title" data-t="p1title">דירת קבלן</h3></div>
+    </div>
+
+    <div class="wrap p-story">
+      <p class="hl" id="hl" data-hl data-t="hl">לקחנו דירת קבלן סטנדרטית בלי אופי והפכנו אותה לבית חם, הרמוני ומדויק.</p>
+      <div class="p-cols rv" data-rv>
+        <p data-t="p1b">דרך תכנון מוקפד, שבירת שגרת הקבלן ויצירת זרימה נכונה בין החללים, שילבנו פלטת חומרים יוקרתית – כמו משטחי מטבח כהים ונקיים – לצד תכנון פונקציונלי שמתאים בדיוק לאורח החיים של הדיירים.</p>
+        <p data-t="p1c">התוצאה היא מעטפת גולמית שהפכה למרחב שלם, מואר ובעל נוכחות עיצובית שמדברת בעד עצמה.</p>
+      </div>
+    </div>
+
+    <div class="quote">
+      <div class="wrap"><blockquote class="rv" data-rv data-t="quote">כשהתכנון פוגש את העיצוב נוצר בית עם אופי.</blockquote></div>
+    </div>
+
+    <div class="car" id="projCar">
+      <div class="car-track rv" data-rv id="carTrack" role="list" tabindex="0" data-t="galLabel" data-ta="aria-label" aria-label="תמונות מהפרויקט – גלילה לצדדים, לחיצה להגדלה">
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:16/9" data-full="img/living-wide.jpg"><img src="img/living-wide.jpg" data-t="g1" data-ta="alt" alt="סלון עם ספה פינתית בגוון בז', ופינת מטבח ואי ברקע" loading="lazy" width="1600" height="900" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:3/4" data-full="img/dining-portrait-a.jpg"><img src="img/dining-portrait-a.jpg" data-t="g2" data-ta="alt" alt="פינת אוכל עם שולחן שחור, כסאות בגוון קאמל וקיר חיפוי עץ" loading="lazy" width="1200" height="1600" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:16/9" data-full="img/living-lamp.jpg"><img src="img/living-lamp.jpg" data-t="g3" data-ta="alt" alt="סלון פתוח למטבח, עם מנורת רצפה ותאורה לינארית בתקרה" loading="lazy" width="1600" height="900" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:16/9" data-full="img/dining-kitchen.jpg"><img src="img/dining-kitchen.jpg" data-t="g9" data-ta="alt" alt="פינת אוכל עם גוף תאורה זהוב ומבט אל המטבח" loading="lazy" width="1600" height="900" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:16/9" data-full="img/kitchen-island.jpg"><img src="img/kitchen-island.jpg" data-t="g4" data-ta="alt" alt="מטבח עם אי כהה, כסאות בר ושלוש מנורות תלויות" loading="lazy" width="1600" height="900" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:3/4" data-full="img/dining-portrait-b.jpg"><img src="img/dining-portrait-b.jpg" data-t="g8" data-ta="alt" alt="פינת אוכל עם שולחן שחור, כסאות בגוון קאמל וגוף תאורה זהוב" loading="lazy" width="1200" height="1600" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:16/9" data-full="img/cabinet-front.jpg"><img src="img/cabinet-front.jpg" data-t="g5" data-ta="alt" alt="ויטרינה בגימור עץ וקיר חיפוי עץ בכניסה לדירה" loading="lazy" width="1600" height="900" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:1358/1107" data-full="img/bedroom.jpg"><img src="img/bedroom.jpg" data-t="g6" data-ta="alt" alt="חדר שינה עם מיטה, שולחן עבודה ווילון זברה" loading="lazy" width="1358" height="1107" draggable="false"></button>
+        <button type="button" role="listitem" class="slide" style="aspect-ratio:16/9" data-full="img/cabinet-side.jpg"><img src="img/cabinet-side.jpg" data-t="g7" data-ta="alt" alt="מבט על הכניסה, הויטרינה וקיר העץ אל פינת האוכל" loading="lazy" width="1600" height="900" draggable="false"></button>
+      </div>
+      <div class="wrap car-ctrl">
+        <div class="car-bar" aria-hidden="true"><i></i></div>
+        <div class="car-btns">
+          <button class="car-btn car-prev" type="button" data-t="carPrev" data-ta="aria-label" aria-label="הקודם">›</button>
+          <button class="car-btn car-next" type="button" data-t="carNext" data-ta="aria-label" aria-label="הבא">‹</button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="wrap">
+    <article class="p2" aria-labelledby="p2-title">
+      <h3 class="h-display rv" data-rv id="p2-title" data-t="p2title">תכנון ועיצוב מחדש לקליניקה להדרכה</h3>
+      <figure class="p2-media rv" data-rv>
+        <video controls preload="metadata" playsinline poster="vid/before-after.jpg" data-t="vaBA" data-ta="aria-label" aria-label="סרטון: לפני ואחרי, עם שמע">
+          <source src="vid/before-after.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="testimonials" aria-labelledby="test-title" style="padding-bottom:0">
+  <div class="wrap">
+    <h2 class="h-display h2 rv" data-rv id="test-title" data-t="testTitle">המלצות</h2>
+  </div>
+  <div class="car" id="tstCar">
+    <div class="car-track tst" id="tstTrack" role="list" tabindex="0" data-t="tstLabel" data-ta="aria-label" aria-label="המלצות מלקוחות – גלילה לצדדים"></div>
+      <div class="wrap car-ctrl">
+        <div class="car-bar" aria-hidden="true"><i></i></div>
+        <div class="car-btns">
+          <button class="car-btn car-prev" type="button" data-t="carPrev" data-ta="aria-label" aria-label="הקודם">›</button>
+          <button class="car-btn car-next" type="button" data-t="carNext" data-ta="aria-label" aria-label="הבא">‹</button>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section" id="field" aria-labelledby="field-title">
+  <div class="wrap">
+    <div class="sec-head rv" data-rv>
+      <h2 class="h-display h2" id="field-title" data-t="fieldTitle">מהשטח</h2>
+    </div>
+
+    <div class="field-top">
+      <div>
+        <h3 class="cmp-title rv" data-rv data-t="cmpTitle">תכנון מטבח: מצב קיים והדמיה</h3>
+      <div class="cmp rv" data-rv id="cmp">
+        <img src="img/kitchen-existing.jpg" data-t="ca" data-ta="alt" alt="מטבח קיים עם ארונות בגוון שמנת ומשטח עבודה שחור" loading="lazy" width="2048" height="1536">
+        <img class="top" src="img/render-kitchen-dining.jpg" data-t="cr" data-ta="alt" alt="הדמיה של מטבח בקו אחד עם ארונות בגוון בז', מקרר שחור ופינת אוכל" loading="lazy" width="1448" height="1086">
+        <span class="bar"></span>
+        <span class="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+        <span class="lbl l" data-t="lblRender">הדמיה</span>
+        <span class="lbl r" data-t="lblExisting">מצב קיים</span>
+        <input type="range" min="0" max="100" value="50" id="cmpRange" data-t="cmpRange" data-ta="aria-label" aria-label="השוואה בין מצב קיים להדמיה. הזיזו כדי לחשוף את ההדמיה">
+      </div>
+      </div>
+    </div>
+
+    <div class="videos">
+      <figure class="fig rv" data-rv>
+        <video controls preload="none" playsinline poster="vid/kitchen-existing.jpg" data-t="va1" data-ta="aria-label" aria-label="סרטון: מטבח קיים">
+          <source src="vid/kitchen-existing.mp4" type="video/mp4">
+        </video>
+        <figcaption data-t="vc1">מטבח קיים</figcaption>
+      </figure>
+      <figure class="fig rv" data-rv>
+        <video controls preload="none" playsinline poster="vid/before-renovation.jpg" data-t="va2" data-ta="aria-label" aria-label="סרטון: חללים לפני שיפוץ">
+          <source src="vid/before-renovation.mp4" type="video/mp4">
+        </video>
+        <figcaption data-t="vc2">לפני שיפוץ</figcaption>
+      </figure>
+      <figure class="fig rv" data-rv>
+        <video controls preload="none" playsinline poster="vid/bathroom.jpg" data-t="va3" data-ta="aria-label" aria-label="סרטון: חדר רחצה">
+          <source src="vid/bathroom.mp4" type="video/mp4">
+        </video>
+        <figcaption data-t="vc3">חדר רחצה</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact-sec" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact">
+    <div class="rv" data-rv>
+      <h2 class="h-display" id="contact-title" data-t="contactTitle">רוצים לשנות את הבית ולא יודעים מאיפה להתחיל?</h2>
+      <p class="lead" data-t="contactLead">דברו איתי לפגישת ייעוץ לא מחייבת. נתחיל?</p>
+      <ul class="details" id="details" hidden></ul>
+    </div>
+    <form class="form rv" data-rv id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field">
+        <label for="f-name" data-t="lName">שם מלא</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+        <span class="err" id="e-name" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="f-phone" data-t="lPhone">מספר טלפון</label>
+        <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-phone">
+        <span class="err" id="e-phone" aria-live="polite"></span>
+      </div>
+      <div class="field">
+        <label for="f-msg" data-t="lMsg">הודעה</label>
+        <textarea id="f-msg" name="message" rows="4" aria-describedby="e-msg"></textarea>
+        <span class="err" id="e-msg" aria-live="polite"></span>
+      </div>
+      <button class="btn" type="submit" data-t="send">שליחת פנייה</button>
+      <p class="fine"><span data-t="consentPre">שליחת הפנייה כפופה ל</span><a href="privacy.html" data-t="legalPrivacyDef">מדיניות הפרטיות</a>.</p>
+      <p class="status" id="status" role="alert" hidden></p>
+    </form>
+    <div class="success rv" id="success" role="status" aria-live="polite" hidden>
+      <svg class="tick" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-17"/></svg>
+      <h3 id="okTitle" data-t="okTitle">תודה, {name}!</h3>
+      <p id="okText" data-t="okSent">ההודעה נשלחה בהצלחה. נוי תחזור אליכם בהקדם.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="brand" style="margin:0">
+      <img src="img/logo.png" alt="" width="34" height="54">
+      <span class="brand-text">
+        <span class="brand-name">Noy Cohen</span>
+        <span class="brand-tag">Architecture &amp; Interior Design</span>
+      </span>
+    </div>
+    <nav aria-label="ניווט תחתון" data-t="footNav" data-ta="aria-label">
+      <a href="#about" data-t="navAbout">קצת עליי</a>
+      <a href="#services" data-t="navServices">שירותים</a>
+      <a href="#projects" data-t="navProjects">פרויקטים</a>
+      <a href="#field" data-t="navField">מהשטח</a>
+      <a href="#contact" data-t="navContact">יצירת קשר</a>
+    </nav>
+    <p class="foot-mail"><a href="mailto:noyc.arc.design@gmail.com" dir="ltr" style="unicode-bidi:isolate">noyc.arc.design@gmail.com</a></p>
+    <nav class="legal" aria-label="מידע משפטי" data-t="legalNav" data-ta="aria-label">
+      <a href="privacy.html" data-t="legalPrivacy">מדיניות פרטיות</a>
+      <a href="terms.html" data-t="legalTerms">תנאי שימוש</a>
+      <a href="accessibility.html" data-t="legalA11y">הצהרת נגישות</a>
+      <a href="cookies.html" data-t="legalCookies">מדיניות Cookies</a>
+    </nav>
+    <p class="copy" data-t="copy">© 2026 Noy Cohen – Architecture &amp; Interior Design. כל הזכויות שמורות.</p>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="https://wa.me/972542827095" target="_blank" rel="noopener" data-t="waLabel" data-ta="aria-label" aria-label="שליחת הודעה בוואטסאפ">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="תצוגת תמונה מוגדלת" data-t="lbLabel" data-ta="aria-label">
+  <button class="lb-btn lb-close" type="button" aria-label="סגירה" data-t="lbClose" data-ta="aria-label">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="התמונה הקודמת" data-t="lbPrev" data-ta="aria-label">›</button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="התמונה הבאה" data-t="lbNext" data-ta="aria-label">‹</button>
+  <img id="lb-img" src="" alt="">
+  <span class="lb-count" id="lb-count"></span>
+</div>
+</div>
+
+<script>
+(function(){
+  var CONFIG = {
+    /* Address of a form-to-phone service (POST, JSON: name, phone, message, lang). While empty, the form falls back to opening WhatsApp. */
+    FORM_ENDPOINT: "https://api.web3forms.com/submit",   /* delivers each inquiry by email via Web3Forms */
+    WEB3_KEY: "c50dbf46-13ac-412a-8a5e-46bdc4f3c82e",   /* public access key, bound to the studio email */
+    EMAIL: "noyc.arc.design@gmail.com",
+    WHATSAPP_INTL: "972542827095"   /* 054-2827095 */
+  };
+
+  var root = document.documentElement, page = document.getElementById("top");
+  root.classList.add("js");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $ = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+
+  /* ---------- translations (Hebrew is the source text in the markup) ---------- */
+  var D = {
+    he:{ menuOpen:"פתיחת תפריט", menuClose:"סגירת תפריט", errName:"נא למלא שם מלא.", errPhone:"נא להזין מספר טלפון תקין.",
+         dEmail:"מייל", aboutImg:"נוי כהן, אדריכלית ומעצבת פנים", waText:"היי נוי, אני רוצה להפוך את הבית שלי לבית החלומות שלי! אשמח לשמוע פרטים 🤍", waForm:"היי נוי, השארתי פנייה באתר 🤍",
+         sending:"שולח…", stFail:"השליחה לא הצליחה. נסו שוב בעוד רגע, או כתבו לנו למייל:", okSent:"ההודעה נשלחה בהצלחה. נוי תחזור אליכם בהקדם.", tPh:"המלצה אמיתית מלקוח תתווסף כאן", tClient:"לקוח/ה של נוי" },
+    en:{
+      skip:"Skip to main content", brandAria:"Noy Cohen – Architecture & Interior Design, back to top", navAria:"Main navigation", langAria:"Language",
+      navServices:"Services", navProjects:"Projects", navField:"From the Field", navContact:"Contact",
+      menuOpen:"Open menu", menuClose:"Close menu",
+      heroAlt:"Living room with a beige corner sofa and a kitchen with a dark island, in a home planned and designed by Noy Cohen",
+      h1:"Good design starts with precise planning.",
+      lead:"Planning and designing spaces with the people who live in and use them in mind, connecting aesthetics, functionality and lifestyle.",
+      cta1:"Book a consultation", cta2:"Projects",
+      servicesTitle:"My Services",
+      n1:"Architecture", d1:"Planning the space from an understanding of the structure, how it is used and the people who live in it.",
+      n2:"Interior Design", d2:"Designing a complete space, including a material palette that connects aesthetics and functionality.",
+      n3:"Kitchen Planning", d3:"Precise, functional kitchen planning that suits the lifestyle of the people who use it.",
+      n4:"Styling", d4:"Completing the design with details that give the space character and presence.",
+      n5:"Visualizations", d5:"A visual presentation of the plan, so you can see the space before you begin.",
+      n6:"Apartment Planning Before Renovation", d6:"Planning the apartment before work begins, to create the right flow between spaces.",
+      n9:"Working Plans", d9:"Drawings of a complete set of plans for the site.",
+      n7:"Tenant Changes Support", d7:"Support through the tenant-changes process, so the apartment fits the lifestyle of the people who live in it.",
+      n8:"Bathroom Renovation", d8:"Bathroom planning that combines design and functionality.",
+      lblRender:"Visualization", lblExisting:"Existing",
+      projectsTitle:"Selected Projects",
+      p1alt:"Open-plan kitchen with an island, black bar stools, pendant lights and a linear light, from the contractor apartment project",
+      p1title:"Contractor Apartment",
+      hl:"We took a standard contractor apartment with no character and turned it into a warm, harmonious and precise home.",
+      p1b:"Through careful planning, breaking the contractor routine and creating the right flow between spaces, we combined a luxurious material palette – such as dark, clean kitchen surfaces – with functional planning that fits the residents' lifestyle exactly.",
+      p1c:"The result is a raw shell that became a complete, bright space with a design presence that speaks for itself.",
+      quote:"When planning meets design, a home with character is created.",
+      galLabel:"Project photos – scroll sideways, click to enlarge",
+      g1:"Living room with a beige corner sofa, and a kitchen with an island in the background",
+      g2:"Dining area with a black table, camel-colored chairs and a wood-paneled wall",
+      g3:"Living room open to the kitchen, with a floor lamp and linear ceiling lighting",
+      g4:"Kitchen with a dark island, bar stools and three pendant lamps",
+      g5:"Wood-finished display cabinet and wood-paneled wall at the apartment entrance",
+      g6:"Bedroom with a bed, a desk and a zebra blind",
+      g7:"View of the entrance, the display cabinet and the wood wall toward the dining area",
+      p2title:"Planning and redesign of a guidance clinic", p2ph:"Project images will be added here.",
+      fieldTitle:"From the Field", cmpTitle:"Kitchen planning: existing state and visualization",
+      ca:"Existing kitchen with cream-colored cabinets and a black countertop",
+      cr:"Visualization of a single-line kitchen with beige cabinets, a black refrigerator and a dining area",
+      cmpRange:"Comparison between the existing state and the visualization. Move to reveal the visualization",
+      va1:"Video: existing kitchen", va2:"Video: spaces before renovation", va3:"Video: bathroom",
+      vc1:"Existing kitchen", vc2:"Before renovation", vc3:"Bathroom",
+      contactTitle:"Want to change your home and don't know where to start?",
+      contactLead:"Talk to me for a no-obligation consultation. Shall we start?",
+      lName:"Full name", lPhone:"Phone number", lMsg:"Message", send:"Send inquiry",
+      errName:"Please enter your full name.", errPhone:"Please enter a valid phone number.",
+      waText:"Hi Noy, I want to turn my home into my dream home! I'd love to hear the details 🤍", waForm:"Hi Noy, I left an inquiry on your website 🤍",
+      okTitle:"Thank you, {name}!", okText:"Your inquiry is ready. WhatsApp opens with all your details – press send so the message reaches Noy.", okFallback:"WhatsApp didn't open? Click here",
+      dEmail:"Email", aboutImg:"Noy Cohen, architect and interior designer", testTitle:"Testimonials", tClient:"A client of Noy", tPh:"A real client message will be added here", carPrev:"Previous", carNext:"Next",
+      baTitle:"Before and After", vaBA:"Video: before and after, with sound",
+      g8:"Dining area with a black table, camel-colored chairs and a golden light fixture", g9:"Dining area with a golden light fixture and a view into the kitchen",
+      sending:"Sending…", stFail:"Sending failed. Please try again in a moment, or email us at:", okSent:"Your message was sent. Noy will get back to you soon.",
+      navAbout:"About Me", aboutTitle:"A Little About Me", aboutLead:"Noy Cohen, 26, architect and interior designer.",
+      aboutP1:"Loves to create, plan and think outside the box. Connects with aesthetics, the small details, and the blend of beauty and functionality.",
+      aboutP2:"Believes every home has its own character and story, and that the real magic is creating a space tailored to the people who live in it – their needs, their dreams and their lifestyle.",
+      aboutP3:"I see the potential in every space, and turn it into the home you have always dreamed of.", aboutPh:"The photo will be added here.",
+      tstLabel:"Client testimonials – scroll sideways",
+      legalNav:"Legal information", legalPrivacy:"Privacy policy", legalTerms:"Terms of use", legalA11y:"Accessibility statement", legalCookies:"Cookies policy", consentPre:"Sending this inquiry is subject to the ", legalPrivacyDef:"privacy policy",
+      footNav:"Footer navigation", copy:"© 2026 Noy Cohen – Architecture & Interior Design. All rights reserved.",
+      waLabel:"Message on WhatsApp",
+      lbLabel:"Enlarged image view", lbClose:"Close", lbPrev:"Previous image", lbNext:"Next image"
+    },
+    es:{
+      skip:"Saltar al contenido principal", brandAria:"Noy Cohen – Architecture & Interior Design, volver arriba", navAria:"Navegación principal", langAria:"Idioma",
+      navServices:"Servicios", navProjects:"Proyectos", navField:"Desde la obra", navContact:"Contacto",
+      menuOpen:"Abrir menú", menuClose:"Cerrar menú",
+      heroAlt:"Salón con un sofá esquinero beige y una cocina con isla oscura, en una vivienda planificada y diseñada por Noy Cohen",
+      h1:"El buen diseño empieza con una planificación precisa.",
+      lead:"Planificamos y diseñamos espacios pensando en las personas que viven en ellos y los usan, conectando estética, funcionalidad y estilo de vida.",
+      cta1:"Reservar una consulta", cta2:"Proyectos",
+      servicesTitle:"Mis servicios",
+      n1:"Arquitectura", d1:"Planificación del espacio a partir de la comprensión de la estructura, su uso y las personas que viven en él.",
+      n2:"Diseño de interiores", d2:"Diseño de un espacio completo, con una paleta de materiales que une estética y funcionalidad.",
+      n3:"Diseño de cocinas", d3:"Planificación de una cocina precisa y funcional, que se adapta al estilo de vida de quien la usa.",
+      n4:"Estilismo", d4:"Completar el diseño con detalles que dan carácter y presencia al espacio.",
+      n5:"Visualizaciones", d5:"Presentación visual del proyecto, para ver el espacio antes de empezar.",
+      n6:"Planificación de viviendas antes de la reforma", d6:"Planificación de la vivienda antes de comenzar las obras, para crear un flujo correcto entre los espacios.",
+      n9:"Planos de obra", d9:"Dibujos de un juego completo de planos para la obra.",
+      n7:"Acompañamiento en cambios de propietarios", d7:"Acompañamiento en el proceso de cambios de propietarios, para que la vivienda se adapte al estilo de vida de quien vive en ella.",
+      n8:"Reforma de baños", d8:"Planificación de baños que combina diseño y funcionalidad.",
+      lblRender:"Visualización", lblExisting:"Estado actual",
+      projectsTitle:"Proyectos seleccionados",
+      p1alt:"Cocina abierta con isla, taburetes negros, lámparas colgantes y luz lineal, del proyecto de vivienda de constructora",
+      p1title:"Vivienda de constructora",
+      hl:"Tomamos una vivienda de constructora estándar, sin carácter, y la convertimos en un hogar cálido, armonioso y preciso.",
+      p1b:"Mediante una planificación cuidadosa, rompiendo la rutina de la constructora y creando un flujo correcto entre los espacios, combinamos una paleta de materiales lujosa – como encimeras de cocina oscuras y limpias – con una planificación funcional que se ajusta exactamente al estilo de vida de los residentes.",
+      p1c:"El resultado es una obra en bruto que se convirtió en un espacio completo y luminoso, con una presencia de diseño que habla por sí sola.",
+      quote:"Cuando la planificación se encuentra con el diseño, nace un hogar con carácter.",
+      galLabel:"Fotos del proyecto – desliza hacia los lados, clic para ampliar",
+      g1:"Salón con un sofá esquinero beige y, al fondo, una cocina con isla",
+      g2:"Comedor con mesa negra, sillas color camel y una pared revestida de madera",
+      g3:"Salón abierto a la cocina, con lámpara de pie e iluminación lineal en el techo",
+      g4:"Cocina con isla oscura, taburetes y tres lámparas colgantes",
+      g5:"Vitrina con acabado en madera y pared revestida de madera en la entrada de la vivienda",
+      g6:"Dormitorio con cama, escritorio y persiana cebra",
+      g7:"Vista de la entrada, la vitrina y la pared de madera hacia el comedor",
+      p2title:"Planificación y rediseño de una clínica de orientación", p2ph:"Aquí se añadirán las imágenes del proyecto.",
+      fieldTitle:"Desde la obra", cmpTitle:"Diseño de cocina: estado actual y visualización",
+      ca:"Cocina actual con armarios color crema y encimera negra",
+      cr:"Visualización de una cocina en línea con armarios beige, nevera negra y zona de comedor",
+      cmpRange:"Comparación entre el estado actual y la visualización. Mueve para descubrir la visualización",
+      va1:"Vídeo: cocina actual", va2:"Vídeo: espacios antes de la reforma", va3:"Vídeo: baño",
+      vc1:"Cocina actual", vc2:"Antes de la reforma", vc3:"Baño",
+      contactTitle:"¿Quieres cambiar tu casa y no sabes por dónde empezar?",
+      contactLead:"Hablemos para una consulta sin compromiso. ¿Empezamos?",
+      lName:"Nombre completo", lPhone:"Número de teléfono", lMsg:"Mensaje", send:"Enviar consulta",
+      errName:"Introduce tu nombre completo.", errPhone:"Introduce un número de teléfono válido.",
+      waText:"¡Hola Noy, quiero convertir mi casa en la casa de mis sueños! Me encantaría conocer los detalles 🤍", waForm:"Hola Noy, he dejado una consulta en tu sitio web 🤍",
+      okTitle:"¡Gracias, {name}!", okText:"Tu consulta está lista. WhatsApp se abre con todos tus datos: pulsa enviar para que el mensaje llegue a Noy.", okFallback:"¿WhatsApp no se abrió? Haz clic aquí",
+      dEmail:"Correo", aboutImg:"Noy Cohen, arquitecta y diseñadora de interiores", testTitle:"Opiniones", tClient:"Cliente de Noy", tPh:"Aquí se añadirá un mensaje real de un cliente", carPrev:"Anterior", carNext:"Siguiente",
+      baTitle:"Antes y después", vaBA:"Vídeo: antes y después, con sonido",
+      g8:"Comedor con mesa negra, sillas color camel y una lámpara dorada", g9:"Comedor con una lámpara dorada y vista a la cocina",
+      sending:"Enviando…", stFail:"No se pudo enviar. Inténtalo de nuevo en un momento o escríbenos a:", okSent:"Tu mensaje fue enviado. Noy te responderá pronto.",
+      navAbout:"Sobre mí", aboutTitle:"Un poco sobre mí", aboutLead:"Noy Cohen, 26 años, arquitecta y diseñadora de interiores.",
+      aboutP1:"Le encanta crear, planificar y pensar fuera de la caja. Conecta con la estética, los pequeños detalles y la combinación entre belleza y funcionalidad.",
+      aboutP2:"Cree que cada hogar tiene su propio carácter e historia, y que la verdadera magia es crear un espacio adaptado a las personas que viven en él: a sus necesidades, sus sueños y su estilo de vida.",
+      aboutP3:"Veo el potencial en cada espacio y lo convierto en el hogar con el que siempre soñaste.", aboutPh:"La foto se añadirá aquí.",
+      tstLabel:"Opiniones de clientes: desplázate hacia los lados",
+      legalNav:"Información legal", legalPrivacy:"Política de privacidad", legalTerms:"Condiciones de uso", legalA11y:"Declaración de accesibilidad", legalCookies:"Política de cookies", consentPre:"El envío de esta consulta está sujeto a la ", legalPrivacyDef:"política de privacidad",
+      footNav:"Navegación del pie de página", copy:"© 2026 Noy Cohen – Architecture & Interior Design. Todos los derechos reservados.",
+      waLabel:"Escribir por WhatsApp",
+      lbLabel:"Vista de imagen ampliada", lbClose:"Cerrar", lbPrev:"Imagen anterior", lbNext:"Imagen siguiente"
+    }
+  };
+  var lang = "he";
+  function tr(k){ return (D[lang] && D[lang][k] !== undefined) ? D[lang][k] : D.he[k]; }
+
+  /* ---------- word helpers ---------- */
+  var hl = $("#hl"), hws = [];
+  function setWords(h, text){
+    h.setAttribute("aria-label", text);
+    h.innerHTML = text.split(/\s+/).map(function(w,i){ return '<span class="w" aria-hidden="true"><span style="--i:'+i+'">'+w+'</span></span>'; }).join(" ");
+  }
+  function setHl(text){
+    hl.setAttribute("aria-label", text);
+    hl.innerHTML = text.split(/\s+/).map(function(w){ return '<span class="hw" aria-hidden="true">'+w.replace(/&/g,"&amp;")+'</span>'; }).join(" ");
+    hws = $$(".hw", hl);
+  }
+  function applyEl(el, text){
+    var a = el.getAttribute("data-ta");
+    if(a){ el.setAttribute(a, text); return; }
+    if(el.hasAttribute("data-words") && !reduce){ setWords(el, text); return; }
+    if(el.hasAttribute("data-hl")){ setHl(text); return; }
+    el.textContent = text;
+  }
+  /* remember Hebrew originals */
+  var tEls = $$("[data-t]");
+  tEls.forEach(function(el){
+    var k = el.getAttribute("data-t"), a = el.getAttribute("data-ta");
+    if(D.he[k] === undefined) D.he[k] = a ? el.getAttribute(a) : el.textContent.trim();
+  });
+
+  function applyLang(code, first){
+    lang = code;
+    var rtl = code === "he";
+    root.lang = code; root.dir = rtl ? "rtl" : "ltr";
+    page.lang = code; page.dir = rtl ? "rtl" : "ltr";
+    tEls.forEach(function(el){
+      var k = el.getAttribute("data-t");
+      if(first && code === "he" && !el.hasAttribute("data-words") && !el.hasAttribute("data-hl")) return;
+      applyEl(el, tr(k));
+    });
+    $$("[data-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-lang") === code); });
+    var open = $("#nav").classList.contains("open");
+    $("#menuBtn").setAttribute("aria-label", open ? tr("menuClose") : tr("menuOpen"));
+    $("#lbPrev").textContent = rtl ? "›" : "‹";
+    $("#lbNext").textContent = rtl ? "‹" : "›";
+    updateWa();
+    buildDetails();
+    renderTst();
+    $$(".car-prev").forEach(function(b){ b.textContent = rtl ? "›" : "‹"; });
+    $$(".car-next").forEach(function(b){ b.textContent = rtl ? "‹" : "›"; });
+    $$(".err").forEach(function(e){ e.textContent = ""; });
+    $$("[aria-invalid]").forEach(function(e){ e.removeAttribute("aria-invalid"); });
+    if(!success.hidden){ $("#okTitle").textContent = tr("okTitle").replace("{name}", lastName); }
+    $("#status").hidden = true;
+    if(!first){ try{ localStorage.setItem("noy-lang", code); }catch(e){} }
+    if(window.__frame) window.__frame();
+  }
+
+  /* ---------- reveal ---------- */
+  var rvs = $$("[data-rv]"), io = null;
+  if(!reduce && "IntersectionObserver" in window){
+    io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove("pre"); io.unobserve(e.target); } });
+    },{rootMargin:"0px 0px -8% 0px",threshold:.08});
+    rvs.forEach(function(el){
+      if(el.getBoundingClientRect().top > innerHeight * .95){ el.classList.add("rv","pre"); io.observe(el); }
+    });
+  }
+
+  /* ---------- services ---------- */
+  var rows = $$(".service"), pimgs = $$("#preview img"), ptag = $("#ptag"), sgrid = $("#sgrid"), active = -1;
+  function setActive(i){
+    if(i === active) return; active = i;
+    rows.forEach(function(r,k){ r.classList.toggle("active", k === i); });
+    pimgs.forEach(function(im,k){ im.classList.toggle("on", k === i); });
+    ptag.classList.toggle("on", i === 4);
+  }
+  sgrid.classList.add("ready");
+  var mq = window.matchMedia("(max-width:1000px)");
+  function sync(){ rows.forEach(function(r,k){ r.querySelector(".svc-btn").setAttribute("aria-expanded", mq.matches ? String(k === active) : "false"); if(!mq.matches) r.querySelector(".svc-btn").removeAttribute("aria-expanded"); }); }
+  rows.forEach(function(r,i){
+    var d = document.createElement("div"); d.className = "svc-img"; d.setAttribute("aria-hidden","true");
+    var w = document.createElement("div"), im = pimgs[i].cloneNode(); im.className = ""; im.loading = "lazy"; w.appendChild(im); d.appendChild(w); r.appendChild(d);
+    r.addEventListener("mouseenter", function(){ if(!mq.matches) setActive(i); });
+    r.addEventListener("focusin", function(){ if(!mq.matches) setActive(i); });
+    r.querySelector(".svc-btn").addEventListener("click", function(){
+      if(!mq.matches) return;
+      if(i === active){ active = -1; rows.forEach(function(x){ x.classList.remove("active"); }); } else setActive(i);
+      sync();
+    });
+  });
+  setActive(0); sync();
+  (mq.addEventListener ? mq.addEventListener("change", sync) : mq.addListener(sync));
+
+  /* ---------- scroll loop ---------- */
+  var hdr = $("#hdr");
+  var pars = $$("[data-parallax]"), lastY = 0, ticking = false;
+  function clamp(v,a,b){ return Math.min(b, Math.max(a, v)); }
+  function frame(){
+    ticking = false;
+    var y = window.scrollY, vh = innerHeight;
+    hdr.classList.toggle("scrolled", y > 8);
+    root.classList.toggle("top", y <= 8);
+    var menuOpen = $("#nav").classList.contains("open");
+    lastY = y;
+    if(reduce) return;
+    pars.forEach(function(el){
+      var b = el.parentElement.getBoundingClientRect();
+      if(b.bottom < 0 || b.top > vh) return;
+      var k = parseFloat(el.getAttribute("data-parallax"));
+      el.style.transform = "translate3d(0," + ((b.top + b.height / 2 - vh / 2) * -k).toFixed(1) + "px,0)";
+    });
+    if(hws.length){
+      var hb = hl.getBoundingClientRect();
+      var prog = clamp((vh * .85 - hb.top) / (vh * .5 + hb.height * .6), 0, 1);
+      var n = Math.round(prog * hws.length);
+      hws.forEach(function(w,i){ w.classList.toggle("on", i < n); });
+    }
+    if(innerWidth > 1000){
+      var sb = sgrid.getBoundingClientRect();
+      if(sb.top < vh * .6 && sb.bottom > vh * .4){
+        var best = 0, bd = 1e9;
+        rows.forEach(function(rw,i){ var b = rw.getBoundingClientRect(); var d = Math.abs(b.top + b.height / 2 - vh * .5); if(d < bd){ bd = d; best = i; } });
+        if(!sgrid.matches(":hover")) setActive(best);
+      }
+    }
+  }
+  window.__frame = frame;
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(frame); } }
+  addEventListener("scroll", onScroll, {passive:true});
+  addEventListener("resize", onScroll);
+
+  /* ---------- menu ---------- */
+  var menuBtn = $("#menuBtn"), nav = $("#nav");
+  function closeMenu(){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); menuBtn.setAttribute("aria-label", tr("menuOpen")); }
+  menuBtn.addEventListener("click", function(){
+    var open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
+    menuBtn.setAttribute("aria-label", open ? tr("menuClose") : tr("menuOpen"));
+  });
+  nav.addEventListener("click", function(e){ if(e.target.tagName === "A") closeMenu(); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeMenu(); });
+  $$("[data-lang]").forEach(function(b){ b.addEventListener("click", function(){ applyLang(b.getAttribute("data-lang")); }); });
+
+  /* ---------- before / after ---------- */
+  var cmp = $("#cmp"), rng = $("#cmpRange");
+  rng.addEventListener("input", function(){ cmp.style.setProperty("--x", rng.value + "%"); });
+
+  /* ---------- WhatsApp: button and form both go to the studio's chat ---------- */
+  function waUrl(text){ return "https://wa.me/" + CONFIG.WHATSAPP_INTL + "?text=" + encodeURIComponent(text); }
+  function buildDetails(){
+    var det = $("#details"); det.innerHTML = "";
+    if(CONFIG.EMAIL){
+      var li = document.createElement("li"), a = document.createElement("a");
+      a.href = "mailto:" + CONFIG.EMAIL; a.textContent = CONFIG.EMAIL; a.style.direction = "ltr"; a.style.unicodeBidi = "isolate";
+      li.appendChild(document.createTextNode(tr("dEmail") + ": ")); li.appendChild(a); det.appendChild(li);
+    }
+    det.hidden = !det.children.length;
+  }
+  function updateWa(){ $("#wa").setAttribute("href", waUrl(tr("waText"))); }
+
+  var form = $("#form"), success = $("#success"), status = $("#status"), lastName = "";
+  function setErr(id, msg){
+    var input = document.getElementById(id), err = document.getElementById("e-" + id.split("-")[1]);
+    err.textContent = msg || "";
+    if(msg) input.setAttribute("aria-invalid","true"); else input.removeAttribute("aria-invalid");
+    return !msg;
+  }
+  function showSuccess(name){
+    lastName = name;
+    $("#okTitle").textContent = tr("okTitle").replace("{name}", name);
+    $("#okText").textContent = tr("okSent");
+    form.hidden = true; success.hidden = false; success.classList.remove("pre");
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    status.hidden = true;
+    var name = $("#f-name").value.trim(), phone = $("#f-phone").value.trim(), msg = $("#f-msg").value.trim();
+    var digits = phone.replace(/\D/g,"");
+    var ok1 = setErr("f-name", name.length < 2 ? tr("errName") : "");
+    var ok2 = setErr("f-phone", (digits.length < 9 || digits.length > 13 || /[^\d+\-\s()]/.test(phone)) ? tr("errPhone") : "");
+    setErr("f-msg","");
+    if(!(ok1 && ok2)){ (ok1 ? $("#f-phone") : $("#f-name")).focus(); return; }
+    function fail(){ status.textContent = tr("stFail") + " " + (CONFIG.EMAIL || ""); status.hidden = false; }
+    if(!CONFIG.FORM_ENDPOINT){ fail(); return; }
+    var btn = $("button[type=submit]", form), label = btn.textContent;
+    btn.disabled = true; btn.textContent = tr("sending");
+    var enc = function(o){ return Object.keys(o).map(function(k){ return encodeURIComponent(k) + "=" + encodeURIComponent(o[k]); }).join("&"); };
+    /* 1) Netlify Forms (works on the Netlify-hosted site, no extra setup) */
+    var viaNetlify = fetch("/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"},
+        body: enc({"form-name":"contact", name:name, phone:phone, message:msg || "-", lang:lang})})
+      .then(function(r){ return r.ok; }, function(){ return false; });
+    /* 2) email delivery via Web3Forms */
+    var viaMail = fetch(CONFIG.FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body: JSON.stringify({access_key:CONFIG.WEB3_KEY, subject:"פנייה חדשה מאתר Noy Cohen", from_name:"Noy Cohen – אתר", name:name, phone:phone, message:msg || "-", lang:lang})})
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(j){ return !!(j && j.success === true); }, function(){ return false; });
+    Promise.all([viaNetlify, viaMail]).then(function(res){
+      if(res[0] || res[1]){ showSuccess(name); form.reset(); } else fail();
+      btn.disabled = false; btn.textContent = label;
+    });
+  });
+  ["f-name","f-phone"].forEach(function(id){ document.getElementById(id).addEventListener("input", function(){ setErr(id,""); }); });
+
+  /* ---------- carousels ---------- */
+  var TESTIMONIALS = [   /* real client messages only: {name, text, time, img}; a missing name shows a generic label */
+    {text:"עבדנו עם נוי על הפרויקט שלנו ופשוט זכינו היא סופר מקצועית, זמינה לכל שאלה, והצליחה להבין בדיוק מה אנחנו רוצים."},
+    {text:"אני ממליץ מכל הלב על נוי כהן, שליוותה אותנו בכל שלב בסבלנות אינסופית והורידה מאיתנו המון לחץ עד לתוצאה המדהימה."},
+    {text:"נוי, חייב להגיד לך שהביקור של הקבלן היום הזכיר לי כמה מזל היה לנו שלקחנו אותך. כל פרט בתוכניות פשוט יושב בול, וחסכת לנו כל כך הרבה כאב ראש מול האנשי מקצוע."},
+    {text:"תקשיבי נוי, היו אצלנו חברים אתמול ולא הפסיקו להתלהב מהחלוקה של החלל ואיך שהכל מרגיש פתוח ונוח. לגמרי שיחקת אותה, תודה על הכל!"},
+    {text:"היי נוי, תודה על הליווי לאורך כל הדרך. היה תענוג לעבוד מול מישהי כזאת מסודרת, זמינה ועניינית. יצא בול מה שרצינו."}
+  ];
+  var cars = [];
+  function initCar(track, ctrl){
+    var prev = $(".car-prev", ctrl), next = $(".car-next", ctrl), bar = $(".car-bar i", ctrl);
+    function pos(){ return Math.abs(track.scrollLeft); }
+    function upd(){
+      var m = track.scrollWidth - track.clientWidth, p = m > 0 ? pos() / m : 0;
+      bar.style.setProperty("--p", (.12 + .88 * Math.min(1, p)).toFixed(3));
+      prev.disabled = pos() < 6; next.disabled = pos() > m - 6;
+    }
+    function step(){ var c = track.firstElementChild; return c ? c.getBoundingClientRect().width + 16 : track.clientWidth * .8; }
+    function go(d){ track.scrollBy({left: d * (lang === "he" ? -1 : 1) * step(), behavior: reduce ? "auto" : "smooth"}); }
+    next.addEventListener("click", function(){ go(1); });
+    prev.addEventListener("click", function(){ go(-1); });
+    var t = false;
+    track.addEventListener("scroll", function(){ if(!t){ t = true; requestAnimationFrame(function(){ t = false; upd(); }); } }, {passive:true});
+    addEventListener("resize", upd);
+    /* mouse drag (touch already scrolls natively) */
+    var down = false, sx = 0, sl = 0;
+    track.addEventListener("pointerdown", function(e){ if(e.pointerType !== "mouse" || e.button !== 0) return; down = true; sx = e.clientX; sl = track.scrollLeft; track._moved = false; });
+    addEventListener("pointermove", function(e){
+      if(!down) return;
+      var dx = e.clientX - sx;
+      if(!track._moved && Math.abs(dx) > 6){ track._moved = true; track.classList.add("dragging"); }
+      if(track._moved) track.scrollLeft = sl - dx;
+    });
+    addEventListener("pointerup", function(){
+      if(!down) return; down = false;
+      if(track._moved){ track.classList.remove("dragging"); setTimeout(function(){ track._moved = false; }, 0); }
+    });
+    cars.push(upd); upd();
+    return upd;
+  }
+  function renderTst(){
+    var track = $("#tstTrack"); track.innerHTML = "";
+    (TESTIMONIALS.length ? TESTIMONIALS : [null, null, null]).forEach(function(t, i){
+      var c = document.createElement("div"); c.className = "tcard"; c.setAttribute("role","listitem");
+      var b = document.createElement("div"); b.className = "bubble" + (t ? "" : " ph");
+      if(t){
+        if(t.name){ var nm = document.createElement("span"); nm.className = "nm"; nm.textContent = t.name; b.appendChild(nm); }
+        if(t.img){ var im = document.createElement("img"); im.src = t.img; im.alt = ""; b.appendChild(im); }
+        if(t.text){ var tx = document.createElement("span"); tx.className = "tx"; tx.setAttribute("dir","rtl"); tx.setAttribute("lang","he"); tx.textContent = t.text; b.appendChild(tx); }
+        if(t.time){ var tm = document.createElement("span"); tm.className = "tm"; tm.textContent = t.time; b.appendChild(tm); }
+        var ck = document.createElement("span"); ck.className = "tck"; ck.setAttribute("aria-hidden","true");
+        ck.innerHTML = '<svg viewBox="0 0 17 11"><polyline points="1,6 4,9 10.5,1.5"/><polyline points="6.5,8.5 8,10 15.5,1.5"/></svg>'; b.appendChild(ck);
+        c.appendChild(b);
+      } else {
+        var w = [["38%"],["96%","88%","64%"],["70%","92%"]][i % 3];
+        b.innerHTML = '<div class="sk" style="width:34%;background:#E9D9C6"></div>' + w.map(function(x){ return '<div class="sk" style="width:'+x+'"></div>'; }).join("") + '<div class="sk" style="width:18%;margin-inline-start:auto"></div>';
+        c.appendChild(b);
+        var p = document.createElement("p"); p.className = "tph"; p.textContent = tr("tPh"); c.appendChild(p);
+      }
+      track.appendChild(c);
+    });
+    cars.forEach(function(f){ f(); });
+  }
+  initCar($("#carTrack"), $("#projCar"));
+  initCar($("#tstTrack"), $("#tstCar"));
+
+  /* ---------- lightbox ---------- */
+  var lb = $("#lb"), lbImg = $("#lb-img"), lbCount = $("#lb-count");
+  var btns = $$("#carTrack .slide"), cur = 0, opener = null;
+  function show(i){
+    cur = (i + btns.length) % btns.length;
+    lbImg.src = btns[cur].getAttribute("data-full"); lbImg.alt = $("img", btns[cur]).alt;
+    lbCount.textContent = (cur + 1) + " / " + btns.length;
+  }
+  function openLb(i){ opener = document.activeElement; show(i); lb.classList.add("open"); $(".lb-close").focus(); document.body.style.overflow = "hidden"; }
+  function closeLb(){ lb.classList.remove("open"); document.body.style.overflow = ""; if(opener) opener.focus(); }
+  btns.forEach(function(b,i){ b.addEventListener("click", function(){ if($("#carTrack")._moved) return; openLb(i); }); });
+  $(".lb-close").addEventListener("click", closeLb);
+  $("#lbPrev").addEventListener("click", function(){ show(cur - 1); });
+  $("#lbNext").addEventListener("click", function(){ show(cur + 1); });
+  lb.addEventListener("click", function(e){ if(e.target === lb) closeLb(); });
+  document.addEventListener("keydown", function(e){
+    if(!lb.classList.contains("open")) return;
+    var rtl = lang === "he";
+    if(e.key === "Escape") closeLb();
+    if(e.key === "Tab"){ var f = $$(".lb-btn", lb), i = f.indexOf(document.activeElement); e.preventDefault(); f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus(); }
+    if(e.key === "ArrowLeft") show(rtl ? cur + 1 : cur - 1);
+    if(e.key === "ArrowRight") show(rtl ? cur - 1 : cur + 1);
+  });
+
+  /* ---------- init ---------- */
+  var saved = "he";
+  try{ var s = localStorage.getItem("noy-lang"); if(s === "en" || s === "es") saved = s; }catch(e){}
+  /* build animated words / highlight for Hebrew first, then switch if another language was chosen */
+  applyLang("he", true);
+  $$("[data-words]").forEach(function(h){ if(!reduce) setWords(h, D.he[h.getAttribute("data-t")]); });
+  setHl(D.he.hl);
+  if(saved !== "he") applyLang(saved, true);
+  frame();
+  if(reduce){ hws.forEach(function(w){ w.classList.add("on"); }); }
+})();
+</script>
+</body></html>
